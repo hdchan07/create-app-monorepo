@@ -1,0 +1,23 @@
+{
+  "name": "@hdchan/eslint-config-typescript",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "author": "Hadi Chan <861883474@qq.com> (https://github.com/HadiChen)",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@hdchan/eslint-config-basic": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.4.1"
+  }
+}
