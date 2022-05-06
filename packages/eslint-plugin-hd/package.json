@@ -1,0 +1,32 @@
+{
+  "name": "@hdchan/eslint-plugin-hd",
+  "version": "0.0.1",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "test": "vitest"
+  },
+  "author": "Hadi Chan <861883474@qq.com> (https://github.com/HadiChen)",
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/utils": "^5.22.0",
+    "@hdchan/eslint-config-typescript": "workspace:*"
+  },
+  "devDependencies": {
+    "unbuild": "^0.7.4",
+    "vitest": "^0.10.4"
+  }
+}

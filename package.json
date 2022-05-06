@@ -4,8 +4,16 @@
   "author": "Hadi Chan <861883474@qq.com> (https://github.com/HadiChen)",
   "private": true,
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "pnpm -r run stub",
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+  },
   "devDependencies": {
+    "@hdchan/eslint-config-vue": "workspace:*",
+    "@hdchan/eslint-config-typescript": "workspace:*",
+    "@hdchan/eslint-config-basic": "workspace:*",
+    "bumpp": "^7.1.1",
     "eslint": "^8.4.1",
     "typescript": "~4.5.5"
   }

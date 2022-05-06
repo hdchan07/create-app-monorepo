@@ -32,7 +32,7 @@ module.exports = {
 	plugins: [
 		"html",
 		"unicorn",
-		"antfu",
+		"@hdchan/hd"
 	],
 	settings: {
 		"import/resolver": {

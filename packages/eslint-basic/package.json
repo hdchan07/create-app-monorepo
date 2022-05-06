@@ -15,6 +15,7 @@
     "lint": "eslint . --config=index.js"
   },
   "dependencies": {
+    "@hdchan/eslint-plugin-hd": "workspace:*",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-import": "^2.26.0",
