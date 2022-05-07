@@ -28,8 +28,8 @@ export default createEslintRule<Options, MessageIds>({
       ImportDeclaration: (node) => {
         // ignore bare type imports
         if (
-          node.specifiers.length === 1 &&
-          ['ImportNamespaceSpecifier', 'ImportDefaultSpecifier']
+          node.specifiers.length === 1
+          && ['ImportNamespaceSpecifier', 'ImportDefaultSpecifier']
             .includes(node.specifiers[0].type)
         ) {
           return;
@@ -37,7 +37,7 @@ export default createEslintRule<Options, MessageIds>({
         if (node.importKind === 'type') {
           context.report({
             *fix(fixer) {
-              yield* removeTypeSpecifier(fixer, sourceCode, node);
+              yield * removeTypeSpecifier(fixer, sourceCode, node);
 
               for (const specifier of node.specifiers) {
                 yield fixer.insertTextBefore(specifier, 'type ');
