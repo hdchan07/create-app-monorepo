@@ -6,8 +6,9 @@ import HelloWorld from './components/HelloWorld.vue';
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <h1>@hdchan/eslint-config-vue demo</h1>
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <HelloWorld
+    msg="@hdchan/eslint-config-vue and @hdchan/tsconfig demo, base on vue3/vite"
+  />
 </template>
 
 <style>

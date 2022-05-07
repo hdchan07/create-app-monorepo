@@ -1,7 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, withDefaults } from 'vue';
 
-defineProps<{ msg: string; }>();
+interface Props {
+  msg: string;
+}
+
+withDefaults(
+  defineProps<Props>(),
+  {
+    msg: '',
+  },
+);
 
 const count = ref(0);
 </script>

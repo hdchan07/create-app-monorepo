@@ -9,12 +9,14 @@
   "scripts": {
     "lint": "eslint . --fix",
     "prepare": "pnpm -r run stub",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
+    "example:dev": "cd example/vue-ts && npm run dev"
   },
   "devDependencies": {
     "@hdchan/eslint-config-typescript": "workspace:*",
     "@hdchan/eslint-config-vue": "workspace:*",
     "@hdchan/eslint-plugin-hd": "workspace:*",
+    "@hdchan/tsconfig": "workspace:*",
     "bumpp": "^7.1.1",
     "eslint": "^8.4.1",
     "typescript": "^4.6.4"

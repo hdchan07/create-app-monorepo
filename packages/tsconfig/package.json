@@ -1,0 +1,16 @@
+{
+  "name": "@hdchan/tsconfig",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Hadi Chan <861883474@qq.com> (https://github.com/HadiChen)",
+  "files": [
+    "node.json",
+    "client.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "typescript": ">=3.9"
+  }
+}

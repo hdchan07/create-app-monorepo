@@ -132,7 +132,7 @@ module.exports = {
 			files: ["**/*.md/*.*"],
 			rules: {
 				"@typescript-eslint/no-redeclare": "off",
-				"@typescript-eslint/no-unused-vars": "off",
+				"@typescript-eslint/no-unused-vars": "warn",
 				"@typescript-eslint/no-use-before-define": "off",
 				"@typescript-eslint/no-var-requires": "off",
 				"@typescript-eslint/comma-dangle": "off",
@@ -142,7 +142,7 @@ module.exports = {
 				"no-restricted-imports": "off",
 				"no-undef": "off",
 				"no-unused-expressions": "off",
-				"no-unused-vars": "off",
+				"no-unused-vars": "warn",
 			},
 		},
 	],
@@ -151,7 +151,7 @@ module.exports = {
 	},
 	rules: {
 		// import
-		"import/order": "error",
+		"import/order": "off",
 		"import/first": "error",
 		"import/no-mutable-exports": "error",
 		"import/no-unresolved": "off",
