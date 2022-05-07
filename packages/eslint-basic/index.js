@@ -305,16 +305,7 @@ module.exports = {
 		"import/no-named-as-default-member": "off",
 		"n/no-callback-literal": "off",
 
-		"sort-imports": [
-			"error",
-			{
-				ignoreCase: false,
-				ignoreDeclarationSort: true,
-				ignoreMemberSort: false,
-				memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
-				allowSeparatedGroups: false,
-			},
-		],
+		"sort-imports": "off",
 
 		// yml
 		"yml/quotes": ["error", { prefer: "single", avoidEscape: false }],

@@ -1,12 +1,13 @@
 {
   "name": "@hdchan/create-app-monorepo",
+  "description": "base on vue/vite",
   "version": "0.0.1",
   "author": "Hadi Chan <861883474@qq.com> (https://github.com/HadiChen)",
   "private": true,
   "license": "MIT",
   "packageManager": "pnpm@7.0.0",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "prepare": "pnpm -r run stub",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
   },

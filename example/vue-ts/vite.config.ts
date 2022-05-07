@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 import eslintPlugin from 'vite-plugin-eslint';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 
@@ -13,7 +13,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
     eslintPlugin({
-      // fix: true,
-    } as any /** fix存在 */)
+      fix: true,
+    } as any /** fix存在 */),
   ],
 });
