@@ -6,6 +6,9 @@
   "private": true,
   "license": "MIT",
   "packageManager": "pnpm@7.0.0",
+  "engines": {
+    "node": ">=12"
+  },
   "scripts": {
     "lint": "eslint . --fix",
     "prepare": "pnpm -r run stub",
