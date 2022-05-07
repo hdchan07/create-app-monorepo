@@ -12,6 +12,8 @@
   },
   "devDependencies": {
     "@hdchan/eslint-config-typescript": "workspace:*",
+    "@hdchan/eslint-config-vue": "workspace:*",
+    "@hdchan/eslint-plugin-hd": "workspace:*",
     "bumpp": "^7.1.1",
     "eslint": "^8.4.1",
     "typescript": "^4.6.4"
