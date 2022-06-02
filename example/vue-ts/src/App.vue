@@ -1,23 +1,23 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue';
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { ElConfigProvider } from 'element-plus';
+import zhCn from 'element-plus/dist/locale/zh-cn.min';
+import 'element-plus/dist/index.css';
+
+export default defineComponent({
+  components: {
+    [ElConfigProvider.name]: ElConfigProvider,
+  },
+  setup() {
+    return {
+      locale: zhCn,
+    };
+  },
+});
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld
-    msg="@hdchan/eslint-config-vue and @hdchan/tsconfig demo, base on vue3/vite"
-  />
+  <el-config-provider :locale="locale" size="small">
+    <router-view />
+  </el-config-provider>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
