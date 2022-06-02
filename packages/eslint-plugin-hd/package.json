@@ -17,15 +17,16 @@
     "dist"
   ],
   "scripts": {
+    "lint": "eslint . --fix",
     "build": "unbuild",
     "stub": "unbuild --stub",
     "test": "vitest"
   },
   "dependencies": {
-    "@hdchan/eslint-config-typescript": "workspace:*",
     "@typescript-eslint/utils": "^5.22.0"
   },
   "devDependencies": {
+    "@hdchan/eslint-config-typescript": "workspace:*",
     "eslint": "^8.4.1",
     "typescript": "^4.6.4",
     "unbuild": "^0.7.4",
