@@ -2,6 +2,7 @@
   "extends": "@hdchan/tsconfig/node",
   "compilerOptions": {
     "composite": false,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [

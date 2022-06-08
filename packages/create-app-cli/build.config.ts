@@ -9,5 +9,15 @@ export default defineBuildConfig({
   clean: true,
   entries: [
     'src/index',
+    'src/cli',
+  ],
+  externals: [
+    'node:url',
+    'node:buffer',
+    'node:path',
+    'node:child_process',
+    'node:process',
+    'node:path',
+    'node:os',
   ],
 });
