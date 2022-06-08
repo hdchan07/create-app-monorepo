@@ -7,7 +7,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint ./src --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
-    "testcli": "create-app dev"
+    "dev:cli": "create-app dev"
   },
   "dependencies": {
     "element-plus": "^2.2.2",

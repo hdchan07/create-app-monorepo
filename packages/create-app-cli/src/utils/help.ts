@@ -1,6 +1,6 @@
 import { cyan, magenta } from 'colorette';
 import consola from 'consola';
-import type { CreateAppCommandMeta } from '../commands/type.d';
+import type { CreateAppCommandMeta } from '../commands/type';
 
 export function showHelp(meta?: CreateAppCommandMeta) {
   const sections: string[] = [];
@@ -13,7 +13,7 @@ export function showHelp(meta?: CreateAppCommandMeta) {
     sections.push(magenta('⋮ ') + meta.description);
   }
 
-  sections.push(`使用 ${cyan('create-app [command] --help')} 查看其它命令`);
+  sections.push(`Use ${cyan('npx create-app [command] --help')} to see help for each command`);
 
   consola.log(`${sections.join('\n\n')}\n`);
 }

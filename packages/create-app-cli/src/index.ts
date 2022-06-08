@@ -2,6 +2,8 @@ import baseConfig from './vite/base';
 import { mergeConfig } from 'vite';
 import { join } from 'pathe';
 
+export {};
+
 console.log(333, mergeConfig(baseConfig(), {
   css: {
     postcss: {

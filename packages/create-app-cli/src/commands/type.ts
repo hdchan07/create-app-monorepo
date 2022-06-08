@@ -1,5 +1,10 @@
 import type minimist from 'minimist';
-import type { COMMAND_ENUM } from './constant';
+
+/* eslint-disable no-unused-vars */
+export enum COMMAND_ENUM {
+  dev = 'dev',
+  usage = 'usage',
+}
 
 export interface CreateAppCommandMeta {
   name: string;
