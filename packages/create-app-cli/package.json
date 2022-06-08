@@ -1,7 +1,6 @@
 {
   "name": "@hdchan/create-app-cli",
   "version": "0.0.1",
-  "private": true,
   "description": "",
   "license": "MIT",
   "author": "Hadi Chan <861883474@qq.com> (https://github.com/HadiChen)",
