@@ -1,7 +1,7 @@
 {
   "name": "@hdchan/create-app-monorepo",
   "description": "base on vue/vite",
-  "version": "0.0.1",
+  "version": "0.0.2-beta.1",
   "author": "Hadi Chan <861883474@qq.com> (https://github.com/HadiChen)",
   "license": "MIT",
   "packageManager": "pnpm@7.0.0",
