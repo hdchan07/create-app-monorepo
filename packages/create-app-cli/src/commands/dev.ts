@@ -4,7 +4,7 @@ export default defineCreateAppCommand({
   meta: {
     name: 'dev',
     usage: 'npx create-app dev [--open, -o] [--port, -p] [--host, -h]',
-    description: '使用 vite 开发模式',
+    description: 'vite 开发模式',
   },
   invoke(args) {
     process.env.NODE_ENV = process.env.NODE_ENV || 'development';
