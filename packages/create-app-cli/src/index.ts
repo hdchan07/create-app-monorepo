@@ -1,30 +1,22 @@
-import baseConfig from './vite/base';
-import { mergeConfig } from 'vite';
-import { join } from 'pathe';
+import type { UserConfigExport, ConfigEnv } from './vite/type';
 
-export {};
+export function defineConfig(config: UserConfigExport) {
+  if (typeof config === 'function') {
+    /**
+     * as default
+     * preview: {command: 'serve' mode: 'production'}
+     * dev: {command: 'serve' mode: 'development'}
+     * build: {command: 'build' mode: 'production'}
+     */
+    return () => config({
+      mode: process.env.NODE_ENV!,
+      viteCommand: process.env.COMMAND === 'build' ? 'build' : 'serve',
+      command: process.env.COMMAND as ConfigEnv['command'],
+    });
+  }
+  return config;
+}
 
-console.log(333, mergeConfig(baseConfig(), {
-  css: {
-    postcss: {
-      preprocessorOptions: {
-        scss: {
-          additionalData(content: string, resourcePath: string) {
-            const stylesStr = [
-              '@use "sass:math";',
-              '@import "@/styles/import.scss";',
-              '@import "@/styles/color.scss";',
-            ].join(' ');
-            const styleRootPath = join(__dirname, 'src/styles').replace(/\\/g, '/');
-            // styles文件夹下不导入上面文件
-            if (resourcePath.startsWith(styleRootPath)) {
-              return content;
-            }
-            return stylesStr + content;
-          },
-          charset: false,
-        },
-      },
-    },
-  },
-}));
+export {
+  UserConfigExport,
+};

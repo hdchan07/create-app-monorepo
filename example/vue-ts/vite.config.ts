@@ -19,8 +19,8 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    eslintPlugin({
-      fix: true,
-    } as any /** fix存在 */),
+    // eslintPlugin({
+    //   fix: true,
+    // } as any /** fix存在 */),
   ],
 });

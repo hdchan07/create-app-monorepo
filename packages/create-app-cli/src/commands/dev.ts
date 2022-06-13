@@ -1,4 +1,6 @@
+import { createServer } from 'vite';
 import { defineCreateAppCommand } from '../utils/define-command';
+import getDevConfig from '../vite/dev';
 
 export default defineCreateAppCommand({
   meta: {
@@ -6,14 +8,23 @@ export default defineCreateAppCommand({
     usage: 'npx create-app dev [--open, -o] [--port, -p] [--host, -h]',
     description: 'vite 开发模式',
   },
-  invoke(args) {
+  async invoke(args) {
     process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-    const devOpts = {
-      open: args?.open || args?.o,
-      port: args?.port || args?.p || 8080,
-      host: args?.host || args?.h || '0.0.0.0',
-    };
-    console.log('dev ---- ', args, devOpts);
+    const devConfig = await getDevConfig({
+      server: {
+        open: args?.open || args?.o,
+        port: args?.port || args?.p,
+        host: args?.host || args?.h,
+      },
+    });
+
+    const viteServer = await createServer(devConfig);
+
+    await viteServer.listen();
+
+    viteServer.printUrls();
+
+    return 'wait';
   },
 });

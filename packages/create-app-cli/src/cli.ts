@@ -37,6 +37,7 @@ export async function main() {
     }
   }, 1000);
 
+  process.env.COMMAND = command;
   const cmd = await commands[command as Command]().then(getDefault);
 
   if (args.h || args.help) {
