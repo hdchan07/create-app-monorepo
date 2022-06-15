@@ -8,7 +8,7 @@ import logo from '@/assets/logo.png';
 <template>
   <ElImage :src="logo" />
   <HelloWorld
-    msg="@hdchan/eslint-config-vue and @hdchan/tsconfig demo, base on vue3/vite"
+    msg="@hdchan/eslint-config-vue、 @hdchan/tsconfig、@hdchan/create-app-cli demo, base on vue3/vite"
   />
 </template>
 

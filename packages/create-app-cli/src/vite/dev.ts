@@ -4,9 +4,10 @@ import defineConfig from '../utils/define-config';
 import loadConfig from '../utils/load-config';
 
 export default defineConfig(async (config) => {
-  const userConfig = await loadConfig();
+  let userConfig = await loadConfig();
+
   if (config) {
-    mergeConfig(userConfig, Object.assign(config, {
+    userConfig = mergeConfig(userConfig, Object.assign(config, {
       mode: process.env.NODE_ENV,
       root: userConfig.rootDir,
       configFile: false,

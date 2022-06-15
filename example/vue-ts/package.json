@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "element-plus": "^2.2.2",
-    "ufo": "^0.8.4",
     "vue": "^3.2.25",
     "vue-router": "^4.0.15"
   },

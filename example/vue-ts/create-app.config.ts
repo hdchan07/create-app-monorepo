@@ -1,24 +1,18 @@
-import path from 'path';
 import { defineConfig } from '@hdchan/create-app-cli';
-import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
+import eslintPlugin from 'vite-plugin-eslint';
 
-export default defineConfig(({ command, mode }) => {
-  console.log('sssdada2323', command, mode);
+export default defineConfig(() => {
   return {
+    eslint: {
+      fix: true,
+      cache: true,
+    },
     server: {
       port: 3000,
       host: '0.0.0.0',
     },
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, './src'),
-        '~@': path.resolve(__dirname, './src'),
-      },
-    },
-    // plugins: [
-    //   vue(),
-    //   vueJsx(),
-    // ],
+    plugins: [
+      eslintPlugin(),
+    ],
   };
 });

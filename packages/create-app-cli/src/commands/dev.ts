@@ -1,6 +1,7 @@
 import { createServer } from 'vite';
 import { defineCreateAppCommand } from '../utils/define-command';
 import getDevConfig from '../vite/dev';
+import type { CLIInvokeResult } from './type';
 
 export default defineCreateAppCommand({
   meta: {
@@ -25,6 +26,6 @@ export default defineCreateAppCommand({
 
     viteServer.printUrls();
 
-    return 'wait';
+    return 'wait' as CLIInvokeResult;
   },
 });

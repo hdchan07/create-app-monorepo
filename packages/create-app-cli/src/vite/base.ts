@@ -1,7 +1,4 @@
 import type { UserConfig } from 'vite';
-import { defineConfig as defineViteConfig, mergeConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import { resolve } from 'pathe';
@@ -10,22 +7,12 @@ import defineConfig from '../utils/define-config';
 
 export default defineConfig((config) => {
   const cwd = process.cwd();
-  const isDev = process.env.NODE_ENV === 'development';
 
-  const vueOptions = mergeConfig({
-    template: {
-      isProduction: !isDev,
-      script: {
-        isProd: !isDev,
-      },
-      compilerOptions: {
-        // 删除注释
-        comments: false,
-      },
-    },
-  }, config?.vue || {});
+  return {
+    typeCheck: true,
+    eslint: true,
+    strip: true,
 
-  return defineViteConfig({
     server: {
       port: 8080,
       host: '0.0.0.0',
@@ -36,10 +23,6 @@ export default defineConfig((config) => {
         '~@': resolve(cwd, './src'),
       },
     },
-    plugins: [
-      vue(vueOptions),
-      vueJsx(),
-    ],
     css: {
       postcss: {
         plugins: [
@@ -63,5 +46,5 @@ export default defineConfig((config) => {
       brotliSize: false,
       chunkSizeWarningLimit: 1000,
     },
-  }) as UserConfig;
+  } as UserConfig;
 });
