@@ -17,9 +17,6 @@ export async function main() {
   const command = args._.shift() || 'usage';
   showBanner(command === 'dev' && args.clear !== false && !args.help);
 
-  consola.log(222, args);
-  console.log(333, command);
-
   if (!(command! in commands)) {
     consola.error(`\n${red(`Invalid command ${command}`)}`);
 
@@ -32,9 +29,7 @@ export async function main() {
   setTimeout(() => {
     try {
       checkEngines();
-    } catch (err) {
-      // 不报错
-    }
+    } catch (error) { /* ignore error */ }
   }, 1000);
 
   process.env.COMMAND = command;

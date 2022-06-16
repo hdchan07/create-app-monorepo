@@ -41,6 +41,7 @@
     "colorette": "^2.0.17",
     "consola": "^2.15.3",
     "cssnano": "^5.1.11",
+    "esbuild": "^0.14.43",
     "minimist": "^1.2.6",
     "pathe": "^0.3.0",
     "rollup": "^2.75.5",

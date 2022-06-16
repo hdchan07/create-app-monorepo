@@ -41,6 +41,7 @@ export default defineConfig((config) => {
       },
     },
     build: {
+      outDir: 'dist',
       target: 'es6',
       cssTarget: 'chrome54',
       brotliSize: false,

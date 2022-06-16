@@ -9,7 +9,6 @@ export default defineConfig(async (config) => {
   if (config) {
     userConfig = mergeConfig(userConfig, Object.assign(config, {
       mode: process.env.NODE_ENV,
-      root: userConfig.rootDir,
       configFile: false,
     }));
   }

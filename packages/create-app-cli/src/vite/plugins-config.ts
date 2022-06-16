@@ -5,10 +5,9 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import checker from 'vite-plugin-checker';
 import eslintPlugin from 'vite-plugin-eslint';
 import strip from '@rollup/plugin-strip';
-import { visualizer } from 'rollup-plugin-visualizer';
 
 import defineConfig from '../utils/define-config';
-import isObject from '../utils/is-object';
+import { isObject } from '../utils/type-check';
 
 export default defineConfig((config) => {
   const vueOptions = mergeConfig({

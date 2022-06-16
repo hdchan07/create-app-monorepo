@@ -13,6 +13,7 @@ import type {
 import type { Options as AutoprefixerPluginOptions } from 'autoprefixer';
 import type { UserPluginConfig } from 'vite-plugin-checker';
 import type { Options as eslintPluginOptions } from 'vite-plugin-eslint';
+import type { PluginVisualizerOptions } from 'rollup-plugin-visualizer';
 
 import type { Command } from '../commands/type';
 
@@ -24,6 +25,8 @@ export interface PluginsConfig {
   autoprefixer?: AutoprefixerPluginOptions;
   strip?: boolean;
   ssr?: SSROptions;
+
+  analyze?: PluginVisualizerOptions;
 }
 
 export type ViteOptions = PluginsConfig & InlineConfig;

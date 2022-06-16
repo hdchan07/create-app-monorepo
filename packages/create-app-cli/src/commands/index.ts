@@ -8,4 +8,9 @@ export const commands: CommandsMap = {
   [COMMAND_ENUM.dev]: () => (import('./dev').then(_getDefault)),
 
   [COMMAND_ENUM.usage]: () => (import('./usage').then(_getDefault)),
+
+  [COMMAND_ENUM.build]: () => (import('./build').then(_getDefault)),
+
+  [COMMAND_ENUM.preview]: () => (import('./preview').then(_getDefault)),
+  [COMMAND_ENUM.start]: () => (import('./preview').then(_getDefault)),
 };

@@ -2,11 +2,11 @@
   "name": "my-vue-app",
   "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint ./src --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
-    "dev:cli": "create-app dev"
+    "dev": "create-app dev",
+    "build": "create-app build",
+    "start": "create-app preview"
   },
   "dependencies": {
     "element-plus": "^2.2.2",

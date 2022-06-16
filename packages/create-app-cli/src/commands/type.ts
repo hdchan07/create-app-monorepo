@@ -4,6 +4,9 @@ import type minimist from 'minimist';
 export enum COMMAND_ENUM {
   dev = 'dev',
   usage = 'usage',
+  build = 'build',
+  preview = 'preview',
+  start = 'start',
 }
 
 export interface CreateAppCommandMeta {
