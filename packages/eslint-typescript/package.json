@@ -19,7 +19,7 @@
     "typescript": ">=3.9"
   },
   "dependencies": {
-    "@hdchan/eslint-config-basic": "^0.0.1",
+    "@hdchan/eslint-config-basic": "^0.0.2",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0"
   },
