@@ -17,6 +17,9 @@
       "types": "./dist/cli.d.ts"
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist",
     "bin"
