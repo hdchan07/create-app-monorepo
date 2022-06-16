@@ -1,7 +1,7 @@
 {
   "name": "@hdchan/create-app-monorepo",
   "description": "base on vue/vite",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.1",
   "author": "Hadi Chan <861883474@qq.com> (https://github.com/HadiChen)",
   "license": "MIT",
   "packageManager": "pnpm@7.0.0",
@@ -19,7 +19,7 @@
     "@hdchan/eslint-config-typescript": "workspace:*",
     "@hdchan/eslint-config-vue": "workspace:*",
     "@hdchan/eslint-plugin-hd": "workspace:*",
-    "@hdchan/tsconfig": "workspace:*",
+    "@hdchan/tsconfig": "^0.0.1",
     "bumpp": "^7.1.1",
     "eslint": "^8.4.1",
     "turbo": "^1.2.14",

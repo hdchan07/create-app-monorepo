@@ -1,6 +1,6 @@
 {
   "name": "@hdchan/create-app-cli",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.1",
   "description": "",
   "license": "MIT",
   "author": "Hadi Chan <861883474@qq.com> (https://github.com/HadiChen)",
@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "@hdchan/eslint-config-typescript": "workspace:*",
-    "@hdchan/tsconfig": "workspace:*",
+    "@hdchan/tsconfig": "^0.0.1",
     "@types/clear": "^0.1.2",
     "@types/cssnano": "^5.1.0",
     "@types/minimist": "^1.2.2",
