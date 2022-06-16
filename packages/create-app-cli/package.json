@@ -52,7 +52,7 @@
     "vite-plugin-eslint": "^1.6.1"
   },
   "devDependencies": {
-    "@hdchan/eslint-config-typescript": "workspace:*",
+    "@hdchan/eslint-config-typescript": "^0.0.1",
     "@hdchan/tsconfig": "^0.0.1",
     "@types/clear": "^0.1.2",
     "@types/cssnano": "^5.1.0",

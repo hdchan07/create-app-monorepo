@@ -16,9 +16,9 @@
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
   },
   "devDependencies": {
-    "@hdchan/eslint-config-typescript": "workspace:*",
-    "@hdchan/eslint-config-vue": "workspace:*",
-    "@hdchan/eslint-plugin-hd": "workspace:*",
+    "@hdchan/eslint-config-typescript": "^0.0.1",
+    "@hdchan/eslint-config-vue": "^0.0.1",
+    "@hdchan/eslint-plugin-hd": "^0.0.1",
     "@hdchan/tsconfig": "^0.0.1",
     "bumpp": "^7.1.1",
     "eslint": "^8.4.1",
